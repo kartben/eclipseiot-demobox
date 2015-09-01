@@ -1,0 +1,3 @@
+[submodule "external/mqtt-greenhouse-simulator"]
+	path = external/mqtt-greenhouse-simulator
+	url = https://github.com/kartben/mqtt-greenhouse-simulator
