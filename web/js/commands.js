@@ -1,10 +1,12 @@
+var HOST = window.location.hostname ;
+
 var DEMO_LINKS = {
     'kura': function() {
-        window.open("http://localhost"); // Kura Web admin
-        window.open("http://localhost:9090"); // Greenhouse "remote"
+        window.open("http://" + HOST); // Kura Web admin
+        window.open("http://" + HOST + ":8000"); // Greenhouse "remote"
     },
     'smarthome': function() {
-        window.open("http://localhost:8080"); // Smarthome Web admin
+        window.open("http://" + HOST + ":8080"); // SmartHome web UI
 
     },
     'tiaki': function() {
@@ -12,7 +14,7 @@ var DEMO_LINKS = {
 
     },
     'leshan': function() {
-        window.open("http://localhost:8080"); // Leshan web UI
+        window.open("http://" + HOST + ":9999"); // Leshan web UI
         window.open("/terminal.html?wakaama"); // wakaama client
     },
     'mosquitto': function() {
