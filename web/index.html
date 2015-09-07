@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Business Frontpage - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <style>
+    @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+    html,
+    body {
+        background: #f4f3f3;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+    }
+    
+    h2 {
+        font-weight: 700;
+    }
+
+    .demo-box {
+        padding:15px;
+    }
+    
+    .demo-box:hover {
+        background: #eeeeee !important;
+        border: 5px dotted #ddd ;
+        padding:10px;
+    }
+    
+    .img-center {
+        margin: 0 auto;
+    }
+    </style>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 demo-box" id="kura">
+                <img class="img-responsive img-center" src="images/kura.png" alt="">
+                <h2>Eclipse Kura</h2>
+                <p>Kura allows you to connect and manage IoT devices by providing a complete gateway application framework on top of Java.</p>
+                <!--                 <button class="btn center-block demo-btn" id="kura">DEMO</button> -->
+            </div>
+            <div class="col-sm-4 demo-box" id="smarthome">
+                <img class="img-responsive img-center" src="images/smarthome.png" alt="">
+                <h2>Eclipse SmartHome</h2>
+                <p>A comprehensive framework to build home automation solutions.</p>
+                <!-- <button class="btn center-block demo-btn" id="smarthome">DEMO</button> -->
+            </div>
+            <div class="col-sm-4 demo-box" id="leshan">
+                <img class="img-responsive img-center" src="images/leshan.png" alt="">
+                <h2>Eclipse Leshan</h2>
+                <p>Leshan is an open source implementation of the OMA-LWM2M Device Management standard in Java.</p>
+                <!-- <button class="btn center-block demo-btn" id="leshan">DEMO</button> -->
+            </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-sm-4 demo-box" id="tiaki">
+                <img class="img-responsive img-center" src="images/tiaki.png" alt="">
+                <h2>Eclipse Tiaki</h2>
+                <p>Tiaki leverages DNS-SEC and DNS-SD to provide secure discovery and provisioning services for IoT devices.</p>
+                <!-- <button class="btn center-block demo-btn" id="tiaki">DEMO</button> -->
+            </div>
+            <div class="col-sm-4 demo-box" id="mosquitto">
+                <img class="img-responsive img-center" src="images/mosquitto.png" alt="">
+                <h2>Eclipse Mosquitto</h2>
+                <p>The most popular open-source MQTT broker. It's written in C, fully spec-compliant, and customizable.</p>
+                <!-- <button class="btn center-block demo-btn" id="mosquitto">DEMO</button> -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/commands.js"></script>
+    <script>
+    (function($, window, document) {
+        $(function() {
+
+            //            $(document).on('click', '#kura-btn', function() { window.alert('xxx'); } );
+            $('.demo-box').on('click', function() {
+                DEMO_LINKS[this.id]();
+            });
+
+            $('.demo-box h2, .demo-box p').toggleClass('text-center');
+        });
+
+    }(window.jQuery, window, document));
+    // The global jQuery object is passed as a parameter
+    </script>
+</body>
+
+</html>

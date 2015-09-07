@@ -1,0 +1,91 @@
+<!doctype html>
+<title>term.js</title>
+<!--
+  term.js
+  Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
+-->
+<style>
+html {
+    background: #000;
+    background: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font: 20px/1.5 sans-serif;
+}
+
+
+/*
+  .terminal {
+    float: left;
+    border: #000 solid 5px;
+    font-family: "DejaVu Sans Mono", "Liberation Mono", monospace;
+    font-size: 11px;
+    color: #f0f0f0;
+    background: #000;
+  }
+
+  .terminal-cursor {
+    color: #000;
+    background: #f0f0f0;
+  }
+*/
+</style>
+<script src="/socket.io/socket.io.js"></script>
+<script src="term.js"></script>
+<script src="/js/commands.js"></script>
+<script>
+;
+(function() {
+    window.onload = function() {
+        var socket = io.connect();
+        socket.on('connect', function() {
+            var term = new Terminal({
+                cols: 117,
+                rows: 44,
+                useStyle: true,
+                screenKeys: true,
+                cursorBlink: true
+            });
+
+            term.on('data', function(data) {
+                socket.emit('data', data);
+            });
+
+            term.on('title', function(title) {
+                document.title = title + 'xxxx';
+            });
+
+            term.open(document.body);
+
+            term.write('\x1b[31mWelcome to term.js!\x1b[m\r\n');
+
+            var cmdId = window.location.search.substring(1);
+
+            if (typeof cmdId != 'undefined') {
+
+                var cmd = SHELL_COMMANDS[cmdId];
+
+                if (Array.isArray(cmd)) {
+                    for (i in cmd) {
+                        term.send(cmd[i] + '\r');
+                    }
+                } else {
+                    term.send(cmd + '\r');
+                }
+            }
+
+
+
+            socket.on('data', function(data) {
+                term.write(data);
+            });
+
+            socket.on('disconnect', function() {
+                term.destroy();
+            });
+        });
+    };
+}).call(this);
+</script>

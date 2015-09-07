@@ -76,14 +76,16 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.use(express.basicAuth(function(user, pass, next) {
-  if (user !== 'foo' || pass !== 'bar') {
-    return next(true);
-  }
-  return next(null, user);
-}));
+// app.use(express.basicAuth(function(user, pass, next) {
+//   if (user !== 'foo' || pass !== 'bar') {
+//     return next(true);
+//   }
+//   return next(null, user);
+// }));
 
-app.use(express.static(__dirname));
+app.use(function(req, res, next) { console.log(req); return next();});
+
+app.use(express.static(__dirname + '/web'));
 app.use(terminal.middleware());
 
 if (!~process.argv.indexOf('-n')) {
