@@ -3,7 +3,7 @@ var HOST = window.location.hostname ;
 var DEMO_LINKS = {
     'kura': function() {
         window.open("http://" + HOST); // Kura Web admin
-        window.open("http://" + HOST + ":8787/app/#/greenhouses/remote/eclipse-greenhouse-ben"); // Greenhouse "remote"
+        window.open("http://" + HOST + ":8000/app/#/greenhouses/remote/eclipse-greenhouse-ben"); // Greenhouse "remote"
     },
     'smarthome': function() {
         window.open("http://" + HOST + ":8080"); // SmartHome web UI
