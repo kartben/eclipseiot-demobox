@@ -25,23 +25,23 @@ var WindowDialog = new function() {
 
 var DEMO_LINKS = {
     'kura': function() {
-        WindowDialog.open("http://" + HOST + ":8000/app/#/greenhouses/remote/eclipse-greenhouse-ben?brokerHost=" + HOST + "&brokerPort=9001"); // Greenhouse "remote"
-        WindowDialog.open("http://" + HOST); // Kura Web admin
+        WindowDialog.open('greenhouse-remote', "http://" + HOST + ":8000/app/#/greenhouses/remote/eclipse-greenhouse-ben?brokerHost=" + HOST + "&brokerPort=9001"); // Greenhouse "remote"
+        WindowDialog.open('kura', "http://" + HOST); // Kura Web admin
     },
     'smarthome': function() {
-        WindowDialog.open("http://" + HOST + ":8080"); // SmartHome web UI
+        WindowDialog.open('esh', "http://" + HOST + ":8080"); // SmartHome web UI
 
     },
     'tiaki': function() {
-        WindowDialog.open("/terminal.html?tiaki"); // Tiaki shell
+        WindowDialog.open('tiaki', "/terminal.html?tiaki"); // Tiaki shell
 
     },
     'leshan': function() {
-        WindowDialog.open("/terminal.html?wakaama"); // wakaama client
-        WindowDialog.open("http://" + HOST + ":9999"); // Leshan web UI
+        WindowDialog.open('wakaama', "/terminal.html?wakaama"); // wakaama client
+        WindowDialog.open('leshan', "http://" + HOST + ":9999"); // Leshan web UI
     },
     'mosquitto': function() {
-        WindowDialog.open("http://localhost:9001/index.html"); // Mosquitto topics tree viz
+        WindowDialog.open('mosquitto', "http://localhost:9001/index.html"); // Mosquitto topics tree viz
     },
 };
 
