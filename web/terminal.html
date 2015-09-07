@@ -61,7 +61,15 @@ h1 {
 
             term.write('\x1b[31mWelcome to term.js!\x1b[m\r\n');
 
+            term.send('\x03');
+
             var cmdId = window.location.search.substring(1);
+
+            var sendCmd = function(cmd) {
+                return function() {
+                    term.send(cmd + '\r')
+                };
+            }
 
             if (typeof cmdId != 'undefined') {
 
@@ -69,10 +77,10 @@ h1 {
 
                 if (Array.isArray(cmd)) {
                     for (i in cmd) {
-                        term.send(cmd[i] + '\r\n');
+                        setTimeout(sendCmd(cmd[i]), 100 + i * 200);
                     }
                 } else {
-                    term.send(cmd + '\r\n');
+                    term.send(cmd + '\r');
                 }
             }
 
