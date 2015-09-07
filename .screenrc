@@ -1,0 +1,22 @@
+# don't display the copyright page
+startup_message off
+
+# increase scrollback buffer size
+defscrollback 10000
+
+deflog on 
+logfile logs/screen-%S-%n.log
+
+
+layout new
+
+screen -t leshan java -jar -DPORT=9999 external/leshan-standalone.jar
+split 
+focus
+
+screen -t mosquitto mosquitto -c config-files/mosquitto/mosquitto.conf 
+split -v
+focus
+
+screen -t openhab external/openhab/start.sh
+
