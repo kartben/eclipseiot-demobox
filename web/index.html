@@ -97,8 +97,8 @@
     (function($, window, document) {
         $(function() {
 
-            //            $(document).on('click', '#kura-btn', function() { window.alert('xxx'); } );
             $('.demo-box').on('click', function() {
+                WindowDialog.closeAll();
                 DEMO_LINKS[this.id]();
             });
 
