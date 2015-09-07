@@ -83,8 +83,6 @@ app.use(function(req, res, next) {
 //   return next(null, user);
 // }));
 
-app.use(function(req, res, next) { console.log(req); return next();});
-
 app.use(express.static(__dirname + '/web'));
 app.use(terminal.middleware());
 
