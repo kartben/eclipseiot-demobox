@@ -69,10 +69,10 @@ h1 {
 
                 if (Array.isArray(cmd)) {
                     for (i in cmd) {
-                        term.send(cmd[i] + '\r');
+                        term.send(cmd[i] + '\r\n');
                     }
                 } else {
-                    term.send(cmd + '\r');
+                    term.send(cmd + '\r\n');
                 }
             }
 
