@@ -22,11 +22,16 @@ screen -t openhab external/openhab/start.sh
 focus
 
 select leshan
-split 
 
+split
+screen -t web node index.js -n
+focus
+
+select leshan 
+
+split 
 chdir external/mqtt-greenhouse-simulator
 screen -t greenhouseweb npm start
 focus
 
 select leshan
-focus
