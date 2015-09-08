@@ -1,4 +1,4 @@
-# don't display the copyright page
+	# don't display the copyright page
 startup_message off
 
 # increase scrollback buffer size
@@ -11,12 +11,22 @@ logfile logs/screen-%S-%n.log
 layout new
 
 screen -t leshan java -jar -DPORT=9999 external/leshan-standalone.jar
-split 
-focus
-
-screen -t mosquitto mosquitto -c config-files/mosquitto/mosquitto.conf 
 split -v
 focus
 
-screen -t openhab external/openhab/start.sh
+screen -t mosquitto mosquitto -c config-files/mosquitto/mosquitto.conf 
+split 
+focus 
 
+screen -t openhab external/openhab/start.sh
+focus
+
+select leshan
+split 
+
+chdir external/mqtt-greenhouse-simulator
+screen -t greenhouseweb npm start
+focus
+
+select leshan
+focus
