@@ -41,7 +41,7 @@ var DEMO_LINKS = {
         WindowDialog.open('leshan', "http://" + HOST + ":9999"); // Leshan web UI
     },
     'mosquitto': function() {
-        WindowDialog.open('mosquitto', "http://localhost:9001/index.html"); // Mosquitto topics tree viz
+        WindowDialog.open('mosquitto', "http://" + HOST + ":9001/index.html"); // Mosquitto topics tree viz
     },
 };
 
