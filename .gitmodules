@@ -7,3 +7,6 @@
 [submodule "external/tiaki-jcli"]
 	path = external/tiaki-jcli
 	url = https://github.com/verisign/iot-discovery-jcli
+[submodule "external/mqtt-topic-tree"]
+	path = external/mqtt-topic-tree
+	url = https://github.com/hardillb/d3-MQTT-Topic-Tree

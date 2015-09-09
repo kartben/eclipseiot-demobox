@@ -42,8 +42,7 @@ var DEMO_LINKS = {
     },
     'mosquitto': function() {
         WindowDialog.open('mosquitto', "http://" + HOST + ":9001/index.html"); // Mosquitto topics tree viz
-	WindowDialog.open('mosquitto-sim', "/terminal.html?mosquitto-sim");
-    }
+    },
 };
 
 var SHELL_COMMANDS = {
@@ -51,9 +50,6 @@ var SHELL_COMMANDS = {
         'cd ~/Repositories/eclipseiot-demobox/external/tiaki-jcli',
         'java -jar ./build/libs/iot-discovery-jcli-1.0.jar -d mcn366rzmd2a.1.iotverisign.com -i -s mqtt -e'
     ],
-    'mosquitto-sim': ['echo "LAUNCHING MOSQUITTO..."',
-	'cd ~/Repositories/eclipseiot-demobox/external/9ac380feb2579a5e1e24',
-	'node faker.js'],
     'wakaama': ['echo "LAUNCHING WAKAAMA..."',
     'cd ~/Repositories/eclipseiot-demobox/external/wakaama',
     //'killall lwm2mclient',
