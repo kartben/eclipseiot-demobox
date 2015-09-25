@@ -13,8 +13,8 @@ Note that we are assuming that you will have setup your touchscreen properly bef
   * sudo /etc/init.d/kura restart
 * Clone this repository recursively in the directory of your choice
   * ```git clone https://github.com/kartben/eclipseiot-demobox --recursive```
-* All that is left for you to do is execute the following command
-  * ```./start.sh```
+* All that is left for you to do is navigate to the directory where you cloned the repository, and execute the following command
+  * ```./setup.sh```
 * You can now open Iceweasel (web browser) and navigate to ```http://localhost:8089```
 
 Setting up your Raspberry Pi as a Wi-Fi hotspot
