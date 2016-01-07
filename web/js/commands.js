@@ -48,8 +48,8 @@ var DEMO_LINKS = {
 
 var SHELL_COMMANDS = {
     'tiaki': ['echo "LAUNCHING TIAKI..."',
-        'cd ~/Repositories/eclipseiot-demobox/external/tiaki-jcli',
-        'java -jar ./build/libs/iot-discovery-jcli-1.0.jar -d mcn366rzmd2a.1.iotverisign.com -i -s mqtt -e'
+        'cd ~/Repositories/eclipseiot-demobox/external/tiaki-java/service-discovery-cli',
+        'java -jar ./build/libs/tiaki-cli-1.0.jar -d mcn366rzmd2a.1.iotverisign.com -i -s mqtt -e'
     ],
     'mosquitto-sim': ['echo "LAUNCHING MOSQUITTO..."',
 	'cd ~/Repositories/eclipseiot-demobox/external/9ac380feb2579a5e1e24',

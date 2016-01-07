@@ -4,9 +4,9 @@
 [submodule "external/wakaama"]
 	path = external/wakaama
 	url = https://github.com/eclipse/wakaama
-[submodule "external/tiaki-jcli"]
-	path = external/tiaki-jcli
-	url = https://github.com/verisign/iot-discovery-jcli
+[submodule "external/tiaki-java"]
+	path = external/tiaki-java
+	url = https://github.com/eclipse/tiaki-java
 [submodule "external/mqtt-topic-tree"]
 	path = external/mqtt-topic-tree
 	url = https://github.com/hardillb/d3-MQTT-Topic-Tree
