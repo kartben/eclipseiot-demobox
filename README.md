@@ -3,7 +3,7 @@ Here's how to setup your Raspberry Pi 2 to run this demo infrastructure.
 
 Note that we are assuming that you will have setup your touchscreen properly beforehand, and of course have some basic knowledge on how to SSH into the Raspberry Pi and things like that :-) If you got a display from Adafruit, you can use their [setup guide](https://learn.adafruit.com/adafruit-5-800x480-tft-hdmi-monitor-touchscreen-backpack) to correctly configure the resolution etc.
 
-* Install Raspbian Jessie on your Raspberry Pi 2, either using an [SD card image](http://gnutoolchains.com/raspberry/jessie/), or by [upgrading an existing Wheezy installation](http://linuxconfig.org/raspbian-gnu-linux-upgrade-from-wheezy-to-raspbian-jessie-8) (longer).
+* Install [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) on your Raspberry Pi 2.
 * Install node.js
   * ```wget http://node-arm.herokuapp.com/node_latest_armhf.deb```<br>
     ```sudo dpkg -i node_latest_armhf.deb``` 
