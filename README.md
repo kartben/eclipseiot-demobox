@@ -20,6 +20,11 @@ Note that we are assuming that you will have setup your touchscreen properly bef
   * ```./setup.sh```
 * You can now open Iceweasel (web browser) and navigate to ```http://localhost:8089```
 
+Kura Greenhouse demo
+====================
+
+You will probably want to play with Kura at some point. You may therefore want to install the greenhouse monitoring solution that is documented [here](http://iot.eclipse.org/java/tutorial/).
+
 Setting up your Raspberry Pi as a Wi-Fi hotspot
 ===============================================
 
