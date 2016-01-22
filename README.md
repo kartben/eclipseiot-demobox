@@ -10,10 +10,10 @@ Note that we are assuming that you will have setup your touchscreen properly bef
 * Install the following apt packages:
   * ```sudo apt-get install screen git cmake build-essential iceweasel```
 * Install Kura (without the network management features)
-  * wget https://s3.amazonaws.com/kura_downloads/raspbian/release/1.2.0/kura_1.2.0_raspberry-pi-2-nn_armv7.deb
-  * sudo dpkg -i kura_1.2.0_raspberry-pi-2-nn_armv7.deb
-  * sudo apt-get install -f
-  * sudo /etc/init.d/kura restart
+  * ```wget https://s3.amazonaws.com/kura_downloads/raspbian/release/1.2.0/kura_1.2.0_raspberry-pi-2-nn_armv7.deb```<br>
+  ```sudo dpkg -i kura_1.2.0_raspberry-pi-2-nn_armv7.deb```<br>
+  ```sudo apt-get install -f```<br>
+  ```sudo /etc/init.d/kura restart```
 * Clone this repository recursively in the directory of your choice
   * ```git clone https://github.com/kartben/eclipseiot-demobox --recursive```
 * All that is left for you to do is navigate to the directory where you cloned the repository, and execute the following command
