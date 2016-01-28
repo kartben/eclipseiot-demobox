@@ -14,7 +14,7 @@ screen -t leshan java -jar -DPORT=9999 external/leshan-standalone.jar
 split -v
 focus
 
-screen -t mosquitto mosquitto -c config-files/mosquitto/mosquitto.conf 
+screen -t mosquitto bash -c 'export LD_LIBRARY_PATH=external/mosquitto/lib; external/mosquitto/mosquitto -c config-files/mosquitto/mosquitto.conf'
 split 
 focus 
 
