@@ -57,5 +57,5 @@ var SHELL_COMMANDS = {
     'wakaama': ['echo "LAUNCHING WAKAAMA..."',
     'cd ~/Repositories/eclipseiot-demobox/external/wakaama',
     //'killall lwm2mclient',
-    './lwm2mclient -h 127.0.0.1 -n raspi -c']
+    './lwm2mclient -n raspi -c']
 };
