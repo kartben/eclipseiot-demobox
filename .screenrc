@@ -10,7 +10,7 @@ logfile logs/screen-%S-%n.log
 
 layout new
 
-screen -t leshan java -jar -DPORT=9999 external/leshan-standalone.jar
+screen -t leshan java -jar -DPORT=9999 external/leshan-server-demo.jar
 split -v
 focus
 
