@@ -36,6 +36,10 @@ var DEMO_LINKS = {
         WindowDialog.open('tiaki', "/terminal.html?tiaki"); // Tiaki shell
 
     },
+    'hawkbit': function() {
+        WindowDialog.open('hawkbit', "http://hawkbit.eu-gb.mybluemix.net/UI"); // Tiaki shell
+
+    },
     'leshan': function() {
         WindowDialog.open('wakaama', "/terminal.html?wakaama"); // wakaama client
         WindowDialog.open('leshan', "http://" + HOST + ":9999"); // Leshan web UI
